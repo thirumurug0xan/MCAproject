@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-style: italic;
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        p {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        label {
+            margin-right: 10px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        input[type="button"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Give us feedback to get closer to you</h1>
+        <form name="feed">
+            <p>Did our employees or customer service staff help you?</p>
+            <input type="radio" value="1" name="a" id="a1"><label for="a1">Good</label>
+            <input type="radio" value="0" name="a" id="a2"><label for="a2">Bad</label>
+
+            <p>Do you trust our site?</p>
+            <input type="radio" value="1" name="b" id="b1"><label for="b1">Yes</label>
+            <input type="radio" value="0" name="b" id="b2"><label for="b2">No</label>
+
+            <p>What can our supermarket do to better serve your needs?</p>
+            <input type="radio" value="1" name="c" id="c1"><label for="c1">Yes</label>
+            <input type="radio" value="0" name="c" id="c2"><label for="c2">No</label>
+
+            <p>How did you reach us?</p>
+            <input type="radio" value="1" name="d" id="d1"><label for="d1">Through a person</label>
+            <input type="radio" value="2" name="d" id="d2"><label for="d2">Seeing ads</label>
+
+            <p>Is our delivery on time or not?</p>
+            <input type="radio" value="1" name="e" id="e1"><label for="e1">Yes</label>
+            <input type="radio" value="0" name="e" id="e2"><label for="e2">No</label><br><br>
+
+            <input type="button" onclick="greet(this.form);" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        function greet(form) {
+            var mark = parseInt(form.a.value) + parseInt(form.b.value) + parseInt(form.c.value) + parseInt(form.d.value) + parseInt(form.e.value); 
+            
+            if (mark === 5) {
+                alert("Thank you for your feedback! Your satisfaction is noted.");
+            } else if (mark === 4 || mark === 3) {
+                alert("Thank you for your feedback! Please tell us more so we can serve you better.");
+                location.href = "feed_form.html";
+            } else {
+                alert("We apologize for any inconvenience. Please share your feedback with us.");
+                location.href = "feed_form.html";
+            }
+        }
+    </script>
+
+</body>
+</html>

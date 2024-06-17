@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            /*background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm5Iasg1UQsP1cr_8DNALGCQaKP8q23HElzA&s');
+            image-resolution: fill;*/
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        .cutebox {
+            padding: 10px;
+        }
+        textarea {
+            width: 75%;
+            height: 100px;
+            padding: 10px;
+            resize: vertical;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback Form</h1>
+        <form id="feedbackForm">
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name" class="cutebox"><br><br>
+            <label>Email</label>
+            <input type="email" placeholder="Enter your Email" class="cutebox"><br><br>
+            <label for="improve">What can we improve to better serve your needs?</label>
+            <textarea id="improve" name="improve" placeholder="Your suggestions"></textarea><br><br><br><br>
+            <button type="button" onclick="alert('Successfully submited')">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

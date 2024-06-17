@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro Mart</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 0 auto;
+            padding: 20px;
+            justify-content: center;
+        }
+        header {
+            background-color: #fff;
+            background-image: url('https://img.freepik.com/premium-photo/photocomposition-horizontal-shopping-banner-with-woman-big-smartphone_23-2151201773.jpg');
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            margin-top: 20px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 10px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 20px;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy8HiUujC93RJ0QekoVc3qXlcolaLaOCJK3w&s');
+        }
+        nav a:hover {
+            color: #007bff;
+        }
+        main {
+            padding: 20px;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+        .product {
+            flex: 1 0 calc(33.33% - 20px);
+            max-width: calc(33.33% - 20px);
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .green-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .dmart{
+            border-radius: 4px;
+            padding: 10px 10px;
+            background-size:5px;
+            background: blur(100px);
+
+        }
+        .blure{
+           max-width: 400px;
+           padding: 5px;
+           background: rgba(255, 255, 255, 0.2);
+           border-radius: 10px;
+           backdrop-filter: blur(5px);
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+           text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <center>
+            <div class="blure">
+            <h1 style="font-style: italic;color: aquamarine;font-size: 62px;">Micro Mart</h1>
+            </div></center>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#featured-products">Products</a>
+                <a href="#about">About us</a>
+                <a href="https://www.linkedin.com/in/thirumurug0xan">Contact</a>
+                <a href="feed.html">Feedback</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="featured-products">
+                <h2>Featured Products</h2>
+                <div class="product-grid">
+                    <div class="product">
+                        <img src="">
+                        <h3>Product 1</h3>
+                        <p>description</p>
+                        <p>price</p>
+                        <button class="green-button" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="">
+                        <h3>Product 2</h3>
+                        <p>Description of Product 2</p>
+                        <p>price</p>
+                        <button class="green-button" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="">
+                        <h3>Product 3</h3>
+                        <p>Description of Product 3</p>
+                        <p>price</p>
+                        <button class="green-button" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="">
+                        <h3>Product 4</h3>
+                        <p>Description of Product 4</p>
+                        <p>price</p>
+                        <button class="green-button" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="">
+                        <h3>Product 5</h3>
+                        <p>Description of Product 5</p>
+                        <p>price</p>
+                        <button class="green-button" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="">
+                        <h3>Product 6</h3>
+                        <p>Description of Product 6</p>
+                        <p>price</p>
+                        <button class="green-button" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script>function addToCart(){
+        alert('selected product added to cart')
+        }</script>
+    <footer id="about">
+        <div class="container">
+            <p style="font-size: 15px;">We believe in what people make possible Our mission is to empower every person and every organization on the planet to achieve more.
+                </p>
+            <label style="font-size: larger;">A product of </label>
+            <a href='https://azure.microsoft.com' target="_blank"><img src="https://aadcdn.msauth.net/shared/1.0/content/images/microsoft_logo_564db913a7fa0ca42727161c6d031bef.svg" alt="Product 1"></a>
+            <p>&copy; 2024 Micro Mart. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
